@@ -1,0 +1,50 @@
+
+.main{
+    background: #e4f0c0;
+}
+.bar-chart{
+    background: rgba(234,255,52,0.35);
+    margin: 5px;
+    
+}
+.sales{
+    padding: 10px;
+    
+    /* (48,255,0)  (4,25,0)*/
+}
+.stats{
+    background: rgba(234,255,52,0.35);
+}
+.table{
+    background: rgba(234,255,52,0.35);
+    padding: 2%;
+}
+.table table{
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    border-radius: 2%;
+}
+.table table th{
+    background: rgba(4,25,0,0.8);
+    color: rgba(234,255,52,0.5);
+}
+.table table th:first-of-type{
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.table table th:last-of-type{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.table table td:first-child{
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.table table td:last-child{
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.table table tr img{
+    height: 90px;
+}
