@@ -28,13 +28,14 @@ export const searchTransaction = async (req, res) => {
     };
     const products = await Product.find(query).skip((page - 1) * perPage).limit(parseInt(perPage));
     const total = await Product.countDocuments(query);
-
+    const totalPages = Math.ceil(total/perPage);
     return res.status(200).json({
       message: "Pagination data",
       products: products,
       page: page,
       total: totalTransactions,
       recordsfound: total,
+      lastPage: totalPages,
       month
     })
   } catch (err) {

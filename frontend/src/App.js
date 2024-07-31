@@ -19,7 +19,7 @@ function App() {
   const [statistics, setStatistics] = useState();
   const [pieChart, setPieChart] = useState();
   const [barChart, setBarChart] = useState();
-
+  const [page, setPage] = useState();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await axios.get(`http://localhost:5000/products?month=${month}&search=${search}`);
@@ -27,6 +27,7 @@ function App() {
     setStatistics(res.data.Statistics);
     setPieChart(res.data.piechart);
     setBarChart(res.data.barchart);
+    setPage(1);
   };
 
   return (
@@ -45,7 +46,7 @@ function App() {
             <button type="submit" className='btn'>Search</button>
           </form>
         </div>
-        <TransactionTable data={table} />
+        <TransactionTable data={table} search={search} month={month} pageno={page}/>
       </div>
       <div className="container">
         <div className="row">
