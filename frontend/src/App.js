@@ -22,7 +22,7 @@ function App() {
   const [page, setPage] = useState();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.get(`${process.env.REACT_APP_HOST}/?month=${month}&search=${search}`).catch(err=>console.log(err));
+    const res = await axios.get(`${process.env.REACT_APP_HOST}?month=${month}&search=${search}`).catch(err=>console.log(err));
     setTable(res.data.tableData);
     setStatistics(res.data.Statistics);
     setPieChart(res.data.piechart);
