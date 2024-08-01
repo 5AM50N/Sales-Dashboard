@@ -22,7 +22,7 @@ function App() {
   const [page, setPage] = useState();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.get(`http://localhost:5000/products?month=${month}&search=${search}`);
+    const res = await axios.get(`${process.env.REACT_APP_HOST}/?month=${month}&search=${search}`).catch(err=>console.log(err));
     setTable(res.data.tableData);
     setStatistics(res.data.Statistics);
     setPieChart(res.data.piechart);
@@ -49,7 +49,7 @@ function App() {
         <TransactionTable data={table} search={search} month={month} pageno={page}/>
       </div>
       <div className="container">
-        <div className="row">
+        <div className="row charts">
           <div className="col-6 sales">
             <Statistics statistics={statistics}></Statistics>
             <Barchart barchart={barChart} />

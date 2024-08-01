@@ -48,3 +48,36 @@
 .table table tr img{
     height: 90px;
 }
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons p{
+    margin: 4px 8px;
+}
+.buttons .btn{
+    margin: 4px;
+    border: solid 1px;
+    background: gray;
+    font-weight: 500;
+}
+.buttons .btn:hover{
+    background: white;
+    border: solid 1px;
+}
+.charts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.pie-chart{
+    background: rgba(234,255,52,0.35);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

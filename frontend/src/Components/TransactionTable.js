@@ -7,7 +7,7 @@ function TransactionTable({ data, search, month, pageno}) {
     const [newData, setNewData] = useState(data);
     useEffect(()=>{
         const fetchData = async()=>{
-            const res = await axios.get(`http://localhost:5000/products/transactions?month=${month}&search=${search}&page=${page}`);
+            const res = await axios.get(`${process.env.REACT_APP_HOST}/transactions?month=${month}&search=${search}&page=${page}`);
             setNewData(res.data);
         }
         fetchData();
@@ -58,12 +58,12 @@ function TransactionTable({ data, search, month, pageno}) {
                         })}
                         </tbody>
                     </table>
+                    <div className="buttons">
+                        <button onClick={()=> handlePrevPage()} disabled={page === 1} className="btn">Prev</button>
+                        <p>{page}</p>
+                        <button onClick={() => handleNextPage()} disabled={page === newData.lastPage} className="btn">Next</button>
+                    </div>
                 </div>
-                <div>
-                    <button onClick={()=> handlePrevPage()} disabled={page === 1}>Prev</button>
-                    <p>{page}</p>
-                    <button onClick={() => handleNextPage()} disabled={page === newData.lastPage}>Next</button>
-            </div>
             </div>
     )
     };
