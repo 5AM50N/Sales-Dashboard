@@ -1,7 +1,4 @@
 
-.main{
-    background: #e4f0c0;
-}
 .bar-chart{
     background: rgba(234,255,52,0.35);
     margin: 5px;
@@ -47,6 +44,7 @@
 }
 .table table tr img{
     height: 90px;
+    max-width: 100px;
 }
 
 .buttons{
@@ -72,10 +70,11 @@
     justify-content: center;
     align-items: center;
     margin: auto;
+    padding: 2px;
 }
 .pie-chart{
     background: rgba(234,255,52,0.35);
-    height: 400px;
+    max-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
