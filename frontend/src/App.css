@@ -1,4 +1,30 @@
-
+.Search-Filter form{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 25px;
+    
+}
+.Search-Filter select{
+    height: 30px;
+    margin: 5px;
+    border-radius: 10px;
+}
+#search{
+    width: 400px;
+    margin: 5px;
+    border-radius: 10px;
+    
+    padding: 5px;
+    text-indent: 8px;
+}
+.Search-Filter button{
+    border: 1px solid;
+    background: rgba(234,255,52,0.5);
+    margin: 5px;
+}
+.Search-Filter button:hover{
+    background: rgba(234,255,52,0.8);
+}
 .bar-chart{
     background: rgba(234,255,52,0.35);
     margin: 5px;

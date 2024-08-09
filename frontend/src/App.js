@@ -36,14 +36,16 @@ function App() {
       <div className="container">
         <div className="Search-Filter">
           <form onSubmit={handleSubmit}>
-            <input type="text" name="search" placeholder="Search" onChange={(e) => setSearch(e.target.value)} />
+            <div>
             <select onChange={(e) => { setMonth(e.target.value) }}>
               <option value={""} name="Select">-Select-</option>
               {months.map((month, index) => {
                 return <option value={month} name={month}>{month}</option>
               })}
             </select>
-            <button type="submit" className='btn'>Search</button>
+            <input type="text" name="search" placeholder="Search" id="search" onChange={(e) => setSearch(e.target.value)} />
+            </div>
+            <div><button type="submit" className='btn'>Search</button></div>
           </form>
         </div>
         <TransactionTable data={table} search={search} month={month} pageno={page}/>
